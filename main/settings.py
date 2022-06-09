@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'sigma_webapp', #HERE: ADD YOUR APPLICATION TO INSTALLED_APPS
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -51,7 +52,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
 ]
-ROOT_URLCONF = 'sigma.urls'
+ROOT_URLCONF = 'main.urls' #HERE CHANGED FROM 'sigma.urls' to 'main.urls', REASON: your djangoproject name is main, not sigma.
 
 TEMPLATES = [
     {
@@ -69,7 +70,11 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'sigma.wsgi.application'
+WSGI_APPLICATION = 'main.wsgi.application' 
+'''
+HERE CHANGED FROM 'main.wsgi.application' to ',main.wsgi.application' , 
+REASON: YOUR DJANGO PROJECT NAME IS main, not sigma.
+'''
 
 
 # Database
